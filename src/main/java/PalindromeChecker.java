@@ -47,8 +47,31 @@ public boolean palindrome(String word)
 }
 public String reverse(String str)
 {
-    String sNew = new String();
-    //your code here
-    return sNew;
+  String bob = "";
+  for (int i =str.length();i>0;i--){
+    bob+=str.substring(i-1,i);
+  }
+  return bob;
+}
+public String onlyLetters(String sString){
+  String s = "";
+  for (int i =0;i<sString.length();i++){
+    if (Character.isLetter(sString.charAt(i))==true){
+      s+=sString.charAt(i);
+    }
+  }
+  return s;
+}
+public String noCapitals(String sWord){
+  return sWord.toLowerCase();
+}
+public String noSpaces(String sWord){
+  String s = "";
+  for (int i =0; i<sWord.length();i++){
+    if (Character.isLetter(sWord.charAt(i))==true){
+      s+=sWord.charAt(i);
+    }
+  }
+  return s;
 }
 }
